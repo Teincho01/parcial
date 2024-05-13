@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DXC Technology</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        body{
+            background-image: url("https://dxc.scene7.com/is/image/dxc/DG_9313a-24%202024%20Gartner%20DXC-com%20Hero%201800x650:banner_carousel");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+
+        }
+        .container { /*preguntar si no pasa si le cambio el nombre para ingresarlo en el CSS en lugar de la etiqueta style */ 
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .content-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .text-box {
+            width: auto;
+            padding: 20px;
+            color: white;
+        }
+
+        .text-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .items-list li {
+            margin-bottom: 10px;
+            list-style-type: disc;
+            padding: 20px;
+            font-size: larger;
+        }
+
+        .image-container {
+            width: 40%;
+            text-align: center;
+            background-color: white;
+        }
+
+        .client-image {
+            display: block;
+            width: 100%; /*esto está al 100% asi todas las imagenes son del mismo tamaño */
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+   </style>
+</head>
+<body>
+    <header>
+        <img id="logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/DXC_Technology_logo_%282021%29.svg/1200px-DXC_Technology_logo_%282021%29.svg.png" alt="Logotipo de Tu Empresa" width="100">
+        <label class="switch">
+            <input type="checkbox">
+            <span class="slider round"></span>
+          </label>
+
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="mision.html">Misión, Visión y Valores</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a class="active" href="propuesta.html">Propuesta Comercial</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <hr id="divider">
+    <p id="pText"> <strong>En DXC Technology, nos dedicamos a ofrecer soluciones tecnológicas innovadoras y servicios de consultoría de clase mundial para </br>ayudar a nuestros clientes a alcanzar sus objetivos empresariales.</strong></p>
+    <div class="container">
+        <div class="content-container">
+            <div class="text-box">
+                <h2>¿Por qué nosotros?</h2>
+                <ul class="items-list">
+                    <li>Experiencia en el mercado</li>
+                    <li>Equipo altamente calificado</li>
+                    <li>Servicio al cliente excepcional</li>
+                    <li>Innovación constante</li>
+                </ul>
+            </div>
+            <div class="image-container">
+                <img src="https://sportsmintmedia.com/wp-content/uploads/2023/05/Scuderia-Ferrari-pens-down-an-association-with-DXC-Technology.jpg" alt="ferrari" class="client-image">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpe66O7aILTDxEZRmuPiKT0uRzeoVL8lpbVNVlX8OmhQ&s" alt="manchesterUnited" class="client-image">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

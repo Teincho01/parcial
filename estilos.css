@@ -1,0 +1,404 @@
+*{ 
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+header {
+    overflow: auto; /*esto es para que se pueda ver todo el header */
+    background-color: white;
+    padding: 5px;
+}
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 20px;
+    color:blueviolet
+
+}
+nav ul { /*saca los bullet points de la lista*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li { /*pone los elementos de la lista en línea*/
+    display: inline;
+    margin-right: 10px;
+}
+nav ul li:last-child { /*quita el margen derecho del último elemento de la lista, Last child lo usamos para seleccionar el último elemento de la lista nav*/
+    margin-right: 0;
+}
+nav ul li a {  /*modifica la apariencia del texto de la nav bar */
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    text-transform: uppercase;
+    font-size: large;
+}
+a.active{
+    background-color: rgb(141, 51, 224);
+    padding: 5px;
+    transition: .5s; 
+    border-radius: 5px;
+}
+a:hover {
+    filter: brightness(150%);
+    background-color: rgb(189, 132, 243);
+    padding: 5px;
+    transition: .5s; 
+    border-radius: 5px;
+}
+
+body {
+    background-color: rgb(255, 255, 255);
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-image: url("https://img.freepik.com/free-vector/subtle-rombus-white-gray-pattern-background_1017-25098.jpg?t=st=1714430818~exp=1714431418~hmac=47fd2b240bf2bdcf90a2ac40de54e359caa59fc9029e65b1172ea66e698a0f4d");
+
+}
+
+#logo {
+    display: inline-block; /*establece que el elemento es un bloque y que se muestra en línea (uno al lado del otro)*/
+    vertical-align: middle; /* alinea los elementos para que el logo y la lista de navegación estén en la misma línea vertical */
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+#startText {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: auto;
+    text-align: justify;
+    margin: 30px;
+    padding: 10px;
+
+}
+.paragraphContainer {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.paragraphContainer p {
+    flex: 1; /* esto hace que ocupen el mismo ancho y de puedan distribuir*/
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+}
+
+#divider { /*linea violeta debajo del header */ 
+    border: 1px solid blueviolet;
+}
+
+#video {
+    background-color: rgb(223, 219, 219);
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    max-width: 100%;
+}
+
+#mision,
+#vision,
+#valores {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 10px;
+    text-align: center;
+}
+#mision h1, #vision h1, #valores h1 {
+    padding-bottom: 10px;
+} 
+.misionContainer {
+    max-width: 1300px;
+    margin: 20px auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.misionContainer p{
+    flex: 1; /* esto hace que ocupen el mismo ancho y de puedan distribuir*/
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-right: 20px; 
+}
+#valores {
+    height: auto;
+}
+
+#imagen {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 10px;
+    max-width: 70%;
+    max-height: 70%;
+}
+
+#pText {
+    text-align: center;
+    border-radius: 5px;
+    height: auto;
+    margin: 30px;
+    padding: 20px;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(110, 66, 168, 0.288);
+    color: white;
+    border-radius: 10px;
+}
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+    grid-gap: 20px; /* Espacio entre las cartas */
+}
+
+#serviceText {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 15px;
+    color: rgb(101, 0, 196)
+
+}
+
+.service {
+    width: 100%;
+}
+
+.card {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    perspective: 1000px;
+}
+
+.card:hover .front {
+    transform: rotateY(-180deg);
+}
+
+.card:hover .back {
+    transform: rotateY(0deg);
+}
+
+.card .front,
+.card .back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    border-radius: 10px;
+}
+
+.card .front {
+    background-color: rgb(39, 39, 39);
+    color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    transform: rotateY(0deg);
+}
+
+.card .back {
+    background-color: rgb(88, 88, 88);
+    line-height: 1.6;
+    padding: 20px;
+    transform: rotateY(-180deg);
+    color: #ffffff;
+}
+.contact-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    flex-wrap: wrap; 
+}
+
+.office-info {
+    width: calc(50% - 20px); 
+    padding: 20px;
+    margin-right: 20px; 
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.office-info h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.message-form {
+    width: calc(50% - 20px);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-group textarea {
+    height: 150px;
+    max-width: 100%;
+    max-height: 150px;
+}
+
+.form-group button {
+    padding: 10px 20px;
+    background-color: #9a0afa;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.form-group button:hover {
+    background-color: #9a0afa;
+}
+
+.switch {
+    position: relative;
+    float: right;
+    width: 60px;
+    height: 34px;
+    margin-top: 20px;
+    margin-right: 10px;
+  }
+
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  .slider {
+    position:absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: blueviolet;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px blueviolet;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+/* Media queries para hacer el diseño responsive */
+@media only screen and (max-width: 1200px) {
+    header {
+        text-align: center;
+    }
+    nav {
+        display: block;
+        margin-left: 0;
+    }
+    nav ul {
+        text-align: center;
+    }
+    nav ul li {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 10px;
+    }
+    #text {
+        height: auto;
+        margin: 20px;
+    }
+    #mision,
+    #vision,
+    #valores {
+        height: auto;
+        margin: 20px auto;
+    }
+    
+    #pText {
+        height: auto;
+        margin: 20px;
+    }
+    .service {
+        width: 100%;
+    }
+    .office-info,
+    .message-form {
+        width: 100%;
+        }
+    .paragraph-container p {
+        width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 20px; 
+}
+
+@media (hover: hover) and (pointer: fine) { /*esto verifica si tiene un mouse o no (no se puede hacer hover con un dispositivo touch sin JS) */ 
+    .service-card:hover {
+        transform: scale(1.05); 
+    }
+}
+
+
+}
